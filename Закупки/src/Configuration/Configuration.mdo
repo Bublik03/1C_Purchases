@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0365b692-8103-4482-9d4f-080ab920563d">
+  <name>Закупки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Закупки</value>
+  </synonym>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="cb8c27a0-d18f-4bfb-876d-9f77f6e2a218"/>
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="bc6074b6-a553-4208-bae6-b47c387d8a39"/>
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="2fbebc8d-f9d7-4b8c-a31b-77e87c7c6719"/>
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="545f59a4-a594-4b5a-a85f-d0cb160cc305"/>
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="93bc5047-7800-405d-86cd-a5e6c51a4bad"/>
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="73f6d0f1-92a7-4b6a-890f-5381c84f9d21"/>
+  <configurationExtensionCompatibilityMode>8.3.14</configurationExtensionCompatibilityMode>
+  <defaultRunMode>ManagedApplication</defaultRunMode>
+  <usePurposes>PersonalComputer</usePurposes>
+  <scriptVariant>Russian</scriptVariant>
+  <defaultLanguage>Language.Русский</defaultLanguage>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
+  <modalityUseMode>DontUse</modalityUseMode>
+  <synchronousPlatformExtensionAndAddInCallUseMode>DontUse</synchronousPlatformExtensionAndAddInCallUseMode>
+  <compatibilityMode>8.3.14</compatibilityMode>
+  <languages uuid="9c27bc19-9d3b-4088-8580-0dc8334783ab">
+    <name>Русский</name>
+    <synonym>
+      <key>ru</key>
+      <value>Русский</value>
+    </synonym>
+    <languageCode>ru</languageCode>
+  </languages>
+  <subsystems>Subsystem.Закупки</subsystems>
+  <subsystems>Subsystem.НСИ</subsystems>
+  <roles>Role.БазоваяРоль</roles>
+  <roles>Role.ПолныеПрава</roles>
+  <roles>Role.ПодсистемаЗакупки</roles>
+  <roles>Role.ПодсистемаСклад</roles>
+  <roles>Role.ПодсистемаНСИ</roles>
+  <roles>Role.ЧтениеПоставщиков</roles>
+  <roles>Role.ДобавлениеИзменениеПоставщика</roles>
+  <roles>Role.СозданиеИзменениеЗаказа</roles>
+  <catalogs>Catalog.Поставщики</catalogs>
+  <catalogs>Catalog.Номенклатура</catalogs>
+  <catalogs>Catalog.СотрудникиКомпании</catalogs>
+  <catalogs>Catalog.СтатусЗаказа</catalogs>
+  <catalogs>Catalog.Склады</catalogs>
+  <documents>Document.ВнутренниеЗаявки</documents>
+  <documents>Document.Заказы</documents>
+  <reports>Report.Закупки</reports>
+  <accumulationRegisters>AccumulationRegister.ОстаткиТоваров</accumulationRegisters>
+</mdclass:Configuration>
