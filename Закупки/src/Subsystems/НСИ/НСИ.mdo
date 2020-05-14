@@ -10,9 +10,9 @@
   <content>Catalog.Поставщики</content>
   <content>Role.ПолныеПрава</content>
   <content>Role.ПодсистемаНСИ</content>
-  <content>Catalog.СотрудникиКомпании</content>
   <content>Catalog.Склады</content>
   <content>Catalog.Номенклатура</content>
   <content>AccumulationRegister.ОстаткиТоваров</content>
   <content>Report.Закупки</content>
+  <content>Catalog.КатегорииТоваров</content>
 </mdclass:Subsystem>

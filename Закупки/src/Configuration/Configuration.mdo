@@ -41,9 +41,9 @@
   <roles>Role.СозданиеИзменениеЗаказа</roles>
   <catalogs>Catalog.Поставщики</catalogs>
   <catalogs>Catalog.Номенклатура</catalogs>
-  <catalogs>Catalog.СотрудникиКомпании</catalogs>
   <catalogs>Catalog.СтатусЗаказа</catalogs>
   <catalogs>Catalog.Склады</catalogs>
+  <catalogs>Catalog.КатегорииТоваров</catalogs>
   <documents>Document.ВнутренниеЗаявки</documents>
   <documents>Document.Заказы</documents>
   <reports>Report.Закупки</reports>

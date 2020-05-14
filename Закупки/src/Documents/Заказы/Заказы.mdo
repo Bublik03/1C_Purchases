@@ -24,6 +24,7 @@
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
   <defaultObjectForm>Document.Заказы.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.Заказы.Form.ФормаСписка</defaultListForm>
   <registerRecords>AccumulationRegister.ОстаткиТоваров</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
@@ -57,6 +58,18 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="0104f8f0-8ab2-48b4-bafd-88a867b28a32">
+    <name>КатегорияТоваров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Категория товаров</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КатегорииТоваров</types>
+    </type>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <attributes uuid="b0b8ae57-5cb4-47bf-9433-67258fe955e8">
     <name>СуммаЗаказа</name>
     <synonym>
@@ -76,25 +89,20 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="dc3666bd-3d2f-4c78-b100-8676299770ce">
-    <name>Склад</name>
-    <synonym>
-      <key>ru</key>
-      <value>Склад</value>
-    </synonym>
-    <type>
-      <types>CatalogRef.Склады</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
   <forms uuid="f3ce8b69-0f54-4ad2-8bad-5c1b4f9aa6be">
     <name>ФормаДокумента</name>
     <synonym>
       <key>ru</key>
       <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bec1f0b2-d874-4157-a40f-a9059ba261a4">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
     </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>

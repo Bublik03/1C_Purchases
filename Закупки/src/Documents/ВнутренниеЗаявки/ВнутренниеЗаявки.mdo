@@ -23,56 +23,66 @@
   <numberAllowedLength>Variable</numberAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ВнутренниеЗаявки.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ВнутренниеЗаявки.Form.ФормаСписка</defaultListForm>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
-  <attributes uuid="c48e89d0-0569-48a0-ba63-c908690914a3">
-    <name>Склад</name>
+  <attributes uuid="850a93c9-20be-40bb-a3cf-9a7559fefbca">
+    <name>Товар</name>
     <synonym>
       <key>ru</key>
-      <value>Склад</value>
+      <value>Товар</value>
     </synonym>
     <type>
-      <types>CatalogRef.Склады</types>
+      <types>CatalogRef.Номенклатура</types>
     </type>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <tabularSections uuid="3ef1150b-b731-4506-971d-d45c0d19bb0a">
-    <producedTypes>
-      <objectType typeId="818daef0-eba1-4514-a250-b3e03c681cdb" valueTypeId="cc764785-76ff-45c3-a00b-9f245691c0a9"/>
-      <rowType typeId="14c3a0b1-6a95-4433-bc3b-5c3d503b8476" valueTypeId="ec56648e-8aca-4eb0-b458-0da0e89089f0"/>
-    </producedTypes>
-    <name>Товары</name>
+  <attributes uuid="92f13b0c-9e27-4f91-8ddc-d6e9af57ea49">
+    <name>КатегорияТоваров</name>
     <synonym>
       <key>ru</key>
-      <value>Товары</value>
+      <value>Категория товаров</value>
     </synonym>
-    <attributes uuid="b5142a70-3350-4c94-8830-7754dbcf3b65">
-      <name>Номенклатура</name>
-      <synonym>
-        <key>ru</key>
-        <value>Номенклатура</value>
-      </synonym>
-      <type>
-        <types>CatalogRef.Номенклатура</types>
-      </type>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="efa32b29-58af-4f23-a024-1d4fde046fd0">
-      <name>Количество</name>
-      <synonym>
-        <key>ru</key>
-        <value>Количество</value>
-      </synonym>
-      <type>
-        <types>Number</types>
-        <numberQualifiers>
-          <precision>10</precision>
-        </numberQualifiers>
-      </type>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-  </tabularSections>
+    <type>
+      <types>CatalogRef.КатегорииТоваров</types>
+    </type>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e5cd92b0-4630-4153-a157-993ecf7ba79b">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="e7ddd3f5-4428-434d-9013-a3375531f259">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8509881a-fb40-4090-ad7a-145268b58ec9">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
 </mdclass:Document>
