@@ -39,6 +39,8 @@
   <roles>Role.ЧтениеПоставщиков</roles>
   <roles>Role.ДобавлениеИзменениеПоставщика</roles>
   <roles>Role.СозданиеИзменениеЗаказа</roles>
+  <constants>Constant.Email</constants>
+  <constants>Constant.Пароль</constants>
   <catalogs>Catalog.Поставщики</catalogs>
   <catalogs>Catalog.Номенклатура</catalogs>
   <catalogs>Catalog.СтатусЗаказа</catalogs>

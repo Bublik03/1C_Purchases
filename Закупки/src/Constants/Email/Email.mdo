@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a9afec79-e7be-4565-8b15-8387c451b0ca">
+  <producedTypes>
+    <managerType typeId="f372ccad-0c37-43a4-9456-1ae13ece1a60" valueTypeId="2ab9795a-4692-4f48-9ab6-f2f2ab1c3bac"/>
+    <valueManagerType typeId="788ea72a-4e4d-4996-999c-ee12776baea3" valueTypeId="69b84357-94a3-44ef-8110-8b008ed22790"/>
+    <valueKeyType typeId="cc5dab62-0335-479c-bd6e-d4d5e775c1e2" valueTypeId="940e76dd-d1a1-44fb-9ffc-0e3abf0c0a4e"/>
+  </producedTypes>
+  <name>Email</name>
+  <synonym>
+    <key>ru</key>
+    <value>Email</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers/>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

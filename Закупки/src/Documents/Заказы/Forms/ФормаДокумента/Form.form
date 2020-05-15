@@ -117,6 +117,10 @@
         <segments>Объект.Статус</segments>
       </paths>
     </dataPath>
+    <handlers>
+      <event>OnChange</event>
+      <name>СтатусПриИзменении</name>
+    </handlers>
     <extendedTooltip>
       <name>СтатусРасширеннаяПодсказка</name>
       <id>12</id>
@@ -632,6 +636,10 @@
       <horizontalAlign>Left</horizontalAlign>
       <autoFill>true</autoFill>
     </autoCommandBar>
+    <handlers>
+      <event>BeforeDeleteRow</event>
+      <name>ТоварыПередУдалением</name>
+    </handlers>
     <searchStringAddition>
       <visible>true</visible>
       <enabled>true</enabled>
