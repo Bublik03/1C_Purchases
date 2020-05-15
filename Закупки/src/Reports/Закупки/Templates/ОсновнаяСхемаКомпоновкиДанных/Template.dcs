@@ -17,17 +17,9 @@
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
 		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Склад</dataPath>
-			<field>Склад</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ОстаткиТоваровОстатки.Номенклатура,
-	ОстаткиТоваровОстатки.Склад,
 	ОстаткиТоваровОстатки.КоличествоОстаток
 ИЗ
 	РегистрНакопления.ОстаткиТоваров.Остатки КАК ОстаткиТоваровОстатки</query>
@@ -70,6 +62,7 @@
 			</dcsset:selection>
 			<dcsset:item xsi:type="dcsset:StructureItemTable">
 				<dcsset:column>
+					<dcsset:use>false</dcsset:use>
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
 							<dcsset:field>Склад</dcsset:field>

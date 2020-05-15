@@ -14,5 +14,4 @@
   <content>Catalog.Номенклатура</content>
   <content>AccumulationRegister.ОстаткиТоваров</content>
   <content>Report.Закупки</content>
-  <content>Catalog.КатегорииТоваров</content>
 </mdclass:Subsystem>
