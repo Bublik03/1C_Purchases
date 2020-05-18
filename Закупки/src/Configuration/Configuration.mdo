@@ -48,7 +48,6 @@
   <catalogs>Catalog.КатегорииТоваров</catalogs>
   <documents>Document.ВнутренниеЗаявки</documents>
   <documents>Document.Заказы</documents>
-  <documents>Document.ПоступлениеТоваров</documents>
   <reports>Report.Закупки</reports>
   <accumulationRegisters>AccumulationRegister.ОстаткиТоваров</accumulationRegisters>
 </mdclass:Configuration>
