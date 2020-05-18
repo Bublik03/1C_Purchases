@@ -12,4 +12,5 @@
   <content>Role.ПодсистемаНСИ</content>
   <content>Constant.Email</content>
   <content>Constant.Пароль</content>
+  <content>Document.ПоступлениеТоваров</content>
 </mdclass:Subsystem>
