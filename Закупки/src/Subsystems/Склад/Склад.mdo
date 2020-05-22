@@ -8,6 +8,5 @@
   <includeHelpInContents>true</includeHelpInContents>
   <includeInCommandInterface>true</includeInCommandInterface>
   <content>AccumulationRegister.ОстаткиТоваров</content>
-  <content>Catalog.Номенклатура</content>
   <content>Report.Закупки</content>
 </mdclass:Subsystem>

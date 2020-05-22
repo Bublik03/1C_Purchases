@@ -50,11 +50,10 @@
       <value>Статус</value>
     </synonym>
     <type>
-      <types>CatalogRef.СтатусЗаказа</types>
+      <types>EnumRef.СтатусЗаказа</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -67,6 +66,9 @@
     <type>
       <types>CatalogRef.КатегорииТоваров</types>
     </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -89,20 +91,20 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <forms uuid="f3ce8b69-0f54-4ad2-8bad-5c1b4f9aa6be">
-    <name>ФормаДокумента</name>
-    <synonym>
-      <key>ru</key>
-      <value>Форма документа</value>
-    </synonym>
-    <usePurposes>PersonalComputer</usePurposes>
-    <usePurposes>MobileDevice</usePurposes>
-  </forms>
   <forms uuid="bec1f0b2-d874-4157-a40f-a9059ba261a4">
     <name>ФормаСписка</name>
     <synonym>
       <key>ru</key>
       <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b70ee4b0-0ecf-4c04-a382-fc4f9944b3eb">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
     </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
@@ -182,6 +184,19 @@
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c15e7de5-e2a5-4263-9863-b46e7fd741e6">
+      <name>НомерДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер документа</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>

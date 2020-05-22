@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:AccumulationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9de9d34e-0c17-4827-83bd-dbfb5901a167">
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9de9d34e-0c17-4827-83bd-dbfb5901a167">
   <producedTypes>
     <selectionType typeId="6ccbb3c7-c15a-4936-a7a0-52f7f76be619" valueTypeId="75826128-da31-4654-bdf2-5eb84857242e"/>
     <listType typeId="f178529e-dfc6-4e5f-937a-b748011b3537" valueTypeId="1c0890e6-80fb-4a52-b536-040b09fba1ba"/>
@@ -14,11 +14,6 @@
     <value>Остатки товаров</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
-  <help>
-    <pages>
-      <lang>ru</lang>
-    </pages>
-  </help>
   <dataLockControlMode>Managed</dataLockControlMode>
   <enableTotalsSplitting>true</enableTotalsSplitting>
   <resources uuid="9e16489c-030e-4c58-befc-6bc8d8ce7f2f">
@@ -33,6 +28,8 @@
         <precision>10</precision>
       </numberQualifiers>
     </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
   </resources>
   <dimensions uuid="c45806fd-2b7e-4880-986d-71f41a12774b">
@@ -44,6 +41,8 @@
     <type>
       <types>CatalogRef.Номенклатура</types>
     </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <useInTotals>true</useInTotals>
   </dimensions>

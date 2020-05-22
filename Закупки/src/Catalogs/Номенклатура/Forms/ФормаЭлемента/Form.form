@@ -201,7 +201,7 @@
     </extInfo>
   </items>
   <items xsi:type="form:FormField">
-    <name>ТекущееКоличество</name>
+    <name>МинимальноеКоличество</name>
     <id>13</id>
     <visible>true</visible>
     <enabled>true</enabled>
@@ -209,14 +209,10 @@
       <common>true</common>
     </userVisible>
     <dataPath xsi:type="form:DataPath">
-      <segments>Объект.ТекущееКоличество</segments>
+      <segments>Объект.МинимальноеКоличество</segments>
     </dataPath>
-    <handlers>
-      <event>OnChange</event>
-      <name>ТекущееКоличествоПриИзменении</name>
-    </handlers>
     <extendedTooltip>
-      <name>ТекущееКоличествоРасширеннаяПодсказка</name>
+      <name>МинимальноеКоличествоРасширеннаяПодсказка</name>
       <id>15</id>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -231,7 +227,7 @@
       </extInfo>
     </extendedTooltip>
     <contextMenu>
-      <name>ТекущееКоличествоКонтекстноеМеню</name>
+      <name>МинимальноеКоличествоКонтекстноеМеню</name>
       <id>14</id>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -255,7 +251,7 @@
     </extInfo>
   </items>
   <items xsi:type="form:FormField">
-    <name>МинимальноеКоличество</name>
+    <name>МаксимальноеКоличество</name>
     <id>16</id>
     <visible>true</visible>
     <enabled>true</enabled>
@@ -263,10 +259,10 @@
       <common>true</common>
     </userVisible>
     <dataPath xsi:type="form:DataPath">
-      <segments>Объект.МинимальноеКоличество</segments>
+      <segments>Объект.МаксимальноеКоличество</segments>
     </dataPath>
     <extendedTooltip>
-      <name>МинимальноеКоличествоРасширеннаяПодсказка</name>
+      <name>МаксимальноеКоличествоРасширеннаяПодсказка</name>
       <id>18</id>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -281,58 +277,8 @@
       </extInfo>
     </extendedTooltip>
     <contextMenu>
-      <name>МинимальноеКоличествоКонтекстноеМеню</name>
-      <id>17</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <autoFill>true</autoFill>
-    </contextMenu>
-    <type>InputField</type>
-    <editMode>EnterOnInput</editMode>
-    <showInHeader>true</showInHeader>
-    <headerHorizontalAlign>Left</headerHorizontalAlign>
-    <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:InputFieldExtInfo">
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <wrap>true</wrap>
-      <chooseType>true</chooseType>
-      <typeDomainEnabled>true</typeDomainEnabled>
-      <textEdit>true</textEdit>
-    </extInfo>
-  </items>
-  <items xsi:type="form:FormField">
-    <name>МаксимальноеКоличество</name>
-    <id>19</id>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <dataPath xsi:type="form:DataPath">
-      <segments>Объект.МаксимальноеКоличество</segments>
-    </dataPath>
-    <extendedTooltip>
-      <name>МаксимальноеКоличествоРасширеннаяПодсказка</name>
-      <id>21</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <contextMenu>
       <name>МаксимальноеКоличествоКонтекстноеМеню</name>
-      <id>20</id>
+      <id>17</id>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -393,18 +339,5 @@
     <navigationPanel/>
     <commandBar/>
   </commandInterface>
-  <extInfo xsi:type="form:CatalogFormExtInfo">
-    <handlers>
-      <event>BeforeWrite</event>
-      <name>ПередЗаписью</name>
-    </handlers>
-    <handlers>
-      <event>AfterWriteAtServer</event>
-      <name>ПослеЗаписиНаСервере</name>
-    </handlers>
-    <handlers>
-      <event>BeforeWriteAtServer</event>
-      <name>ПередЗаписьюНаСервере</name>
-    </handlers>
-  </extInfo>
+  <extInfo xsi:type="form:CatalogFormExtInfo"/>
 </form:Form>

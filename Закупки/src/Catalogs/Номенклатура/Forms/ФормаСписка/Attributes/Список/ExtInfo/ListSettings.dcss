@@ -1,17 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core">
-	<filter>
-		<viewMode>Normal</viewMode>
-		<userSettingID>67fa7e52-5d33-4d30-bbff-dadfa256148e</userSettingID>
-	</filter>
-	<order>
-		<viewMode>Normal</viewMode>
-		<userSettingID>de47796f-06b3-4a49-a9fc-19c5e7519e83</userSettingID>
-	</order>
-	<conditionalAppearance>
-		<viewMode>Normal</viewMode>
-		<userSettingID>cc4a4e6c-7a48-49bc-8299-56da2390b4a0</userSettingID>
-	</conditionalAppearance>
-	<itemsViewMode>Normal</itemsViewMode>
-	<itemsUserSettingID>e3cf7b01-6fce-489c-8ad4-c44930730e65</itemsUserSettingID>
-</Settings>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings"/>

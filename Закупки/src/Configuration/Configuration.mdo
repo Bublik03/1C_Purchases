@@ -44,10 +44,11 @@
   <constants>Constant.Пароль</constants>
   <catalogs>Catalog.Поставщики</catalogs>
   <catalogs>Catalog.Номенклатура</catalogs>
-  <catalogs>Catalog.СтатусЗаказа</catalogs>
   <catalogs>Catalog.КатегорииТоваров</catalogs>
   <documents>Document.ВнутренниеЗаявки</documents>
   <documents>Document.Заказы</documents>
+  <enums>Enum.СтатусЗаказа</enums>
+  <enums>Enum.СтатусЗаявки</enums>
   <reports>Report.Закупки</reports>
   <accumulationRegisters>AccumulationRegister.ОстаткиТоваров</accumulationRegisters>
 </mdclass:Configuration>

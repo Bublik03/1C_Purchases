@@ -12,4 +12,6 @@
   <content>Role.ПодсистемаНСИ</content>
   <content>Constant.Email</content>
   <content>Constant.Пароль</content>
+  <content>Catalog.КатегорииТоваров</content>
+  <content>Catalog.Номенклатура</content>
 </mdclass:Subsystem>

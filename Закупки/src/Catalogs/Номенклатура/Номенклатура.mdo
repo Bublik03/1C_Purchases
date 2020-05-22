@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bd99f01a-c8a8-4411-9bfc-310299916533">
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bd99f01a-c8a8-4411-9bfc-310299916533">
   <producedTypes>
     <objectType typeId="1e97b4f7-2313-4fee-8dbf-06292084b424" valueTypeId="9ab8255d-2c39-4def-a8fa-7e0d30f2fc74"/>
     <refType typeId="55596e3f-6590-497a-8edd-4000ac3939eb" valueTypeId="20207867-9009-4ed7-816e-d883e7ea67bf"/>
@@ -44,23 +44,11 @@
       <types>Number</types>
       <numberQualifiers>
         <precision>10</precision>
+        <nonNegative>true</nonNegative>
       </numberQualifiers>
     </type>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="54a3acbd-c064-4024-98c5-bfe900844a18">
-    <name>ТекущееКоличество</name>
-    <synonym>
-      <key>ru</key>
-      <value>Текущее количество</value>
-    </synonym>
-    <type>
-      <types>Number</types>
-      <numberQualifiers>
-        <precision>10</precision>
-      </numberQualifiers>
-    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -74,8 +62,11 @@
       <types>Number</types>
       <numberQualifiers>
         <precision>10</precision>
+        <nonNegative>true</nonNegative>
       </numberQualifiers>
     </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -89,8 +80,11 @@
       <types>Number</types>
       <numberQualifiers>
         <precision>10</precision>
+        <nonNegative>true</nonNegative>
       </numberQualifiers>
     </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -103,7 +97,7 @@
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
-  <forms uuid="510508ad-2c32-4894-8834-536d222ac5f8">
+  <forms uuid="c0e7b26d-d151-4ccc-8c87-83d649713037">
     <name>ФормаЭлемента</name>
     <synonym>
       <key>ru</key>

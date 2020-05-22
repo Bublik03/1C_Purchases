@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9c09a986-3fe9-4ebf-b96a-418c7c51bb86">
+  <producedTypes>
+    <refType typeId="f816c5d6-eb51-4b27-9cd9-5b798adb859c" valueTypeId="fc717ba8-f5e4-43a4-b408-a43e86cee9c2"/>
+    <listType typeId="f1954bb3-31c6-49e1-8323-467fd4355d4f" valueTypeId="18d95510-c3eb-4879-bdc5-5caf303d33f9"/>
+    <managerType typeId="64636d74-86a1-4c3a-acc2-aab369fce9b9" valueTypeId="c7f23d5b-2c93-403a-8803-00cb23884603"/>
+  </producedTypes>
+  <name>СтатусЗаказа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статус заказа</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="a4f5aab8-006f-47a5-bce3-e82269ce3cf5">
+    <name>НеСогласован</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не согласован</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="73200465-1e92-4c39-a95b-c883fe19b59b">
+    <name>Согласован</name>
+    <synonym>
+      <key>ru</key>
+      <value>Согласован</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="3066bab6-d4f7-482f-8569-7794cd82c6c1">
+    <name>Оплачен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оплачен</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="5816ad55-795f-4e07-bd8b-70110887c346">
+    <name>Получен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получен</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d9f1114a-19fd-4190-803e-e6de466841d5">
+    <name>Закрыт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Закрыт</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>
