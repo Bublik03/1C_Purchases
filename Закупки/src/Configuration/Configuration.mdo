@@ -31,7 +31,6 @@
   </languages>
   <subsystems>Subsystem.Закупки</subsystems>
   <subsystems>Subsystem.НСИ</subsystems>
-  <subsystems>Subsystem.Склад</subsystems>
   <roles>Role.БазоваяРоль</roles>
   <roles>Role.ПолныеПрава</roles>
   <roles>Role.ПодсистемаЗакупки</roles>
@@ -47,6 +46,7 @@
   <catalogs>Catalog.КатегорииТоваров</catalogs>
   <documents>Document.ВнутренниеЗаявки</documents>
   <documents>Document.Заказы</documents>
+  <documents>Document.Поступления</documents>
   <enums>Enum.СтатусЗаказа</enums>
   <enums>Enum.СтатусЗаявки</enums>
   <reports>Report.Закупки</reports>

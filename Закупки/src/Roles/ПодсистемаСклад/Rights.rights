@@ -3,11 +3,4 @@
 	<setForNewObjects>false</setForNewObjects>
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
-	<object>
-		<name>Subsystem.Склад</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
 </Rights>

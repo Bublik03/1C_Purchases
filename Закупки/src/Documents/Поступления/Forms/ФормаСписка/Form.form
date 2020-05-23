@@ -40,7 +40,7 @@
   </items>
   <items xsi:type="form:Button">
     <name>Удалить</name>
-    <id>31</id>
+    <id>22</id>
     <visible>true</visible>
     <enabled>true</enabled>
     <userVisible>
@@ -48,7 +48,7 @@
     </userVisible>
     <extendedTooltip>
       <name>УдалитьРасширеннаяПодсказка</name>
-      <id>32</id>
+      <id>23</id>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -180,8 +180,8 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
-      <name>КатегорияТоваров</name>
-      <id>22</id>
+      <name>НомерЗаказа</name>
+      <id>24</id>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -189,12 +189,12 @@
       </userVisible>
       <dataPath xsi:type="form:MultiLanguageDataPath">
         <paths xsi:type="form:DataPath">
-          <segments>Список.КатегорияТоваров</segments>
+          <segments>Список.НомерЗаказа</segments>
         </paths>
       </dataPath>
       <extendedTooltip>
-        <name>КатегорияТоваровРасширеннаяПодсказка</name>
-        <id>24</id>
+        <name>НомерЗаказаРасширеннаяПодсказка</name>
+        <id>26</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -208,8 +208,8 @@
         </extInfo>
       </extendedTooltip>
       <contextMenu>
-        <name>КатегорияТоваровКонтекстноеМеню</name>
-        <id>23</id>
+        <name>НомерЗаказаКонтекстноеМеню</name>
+        <id>25</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -232,8 +232,8 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
-      <name>Статус</name>
-      <id>25</id>
+      <name>СуммаЗаказа</name>
+      <id>27</id>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -241,12 +241,12 @@
       </userVisible>
       <dataPath xsi:type="form:MultiLanguageDataPath">
         <paths xsi:type="form:DataPath">
-          <segments>Список.Статус</segments>
+          <segments>Список.СуммаЗаказа</segments>
         </paths>
       </dataPath>
       <extendedTooltip>
-        <name>СтатусРасширеннаяПодсказка</name>
-        <id>27</id>
+        <name>СуммаЗаказаРасширеннаяПодсказка</name>
+        <id>29</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -260,8 +260,8 @@
         </extInfo>
       </extendedTooltip>
       <contextMenu>
-        <name>СтатусКонтекстноеМеню</name>
-        <id>26</id>
+        <name>СуммаЗаказаКонтекстноеМеню</name>
+        <id>28</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -502,7 +502,7 @@
     </edit>
     <main>true</main>
     <extInfo xsi:type="form:DynamicListExtInfo">
-      <mainTable>Document.Заказы</mainTable>
+      <mainTable>Document.Поступления</mainTable>
       <dynamicDataRead>true</dynamicDataRead>
       <autoFillAvailableFields>true</autoFillAvailableFields>
       <autoSaveUserSettings>true</autoSaveUserSettings>

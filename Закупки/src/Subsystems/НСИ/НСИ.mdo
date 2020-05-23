@@ -14,4 +14,6 @@
   <content>Constant.Пароль</content>
   <content>Catalog.КатегорииТоваров</content>
   <content>Catalog.Номенклатура</content>
+  <content>Report.Закупки</content>
+  <content>AccumulationRegister.ОстаткиТоваров</content>
 </mdclass:Subsystem>

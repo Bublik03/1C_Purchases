@@ -40,11 +40,4 @@
       <value>Получен</value>
     </synonym>
   </enumValues>
-  <enumValues uuid="d9f1114a-19fd-4190-803e-e6de466841d5">
-    <name>Закрыт</name>
-    <synonym>
-      <key>ru</key>
-      <value>Закрыт</value>
-    </synonym>
-  </enumValues>
 </mdclass:Enum>

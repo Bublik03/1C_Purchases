@@ -14,8 +14,18 @@
     <value>Остатки товаров</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <dataLockControlMode>Managed</dataLockControlMode>
   <enableTotalsSplitting>true</enableTotalsSplitting>
+  <listPresentation>
+    <key>ru</key>
+    <value>Остатки</value>
+  </listPresentation>
   <resources uuid="9e16489c-030e-4c58-befc-6bc8d8ce7f2f">
     <name>Количество</name>
     <synonym>
