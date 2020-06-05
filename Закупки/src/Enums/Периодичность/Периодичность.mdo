@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="de823ede-09b7-4019-87d2-00cc01df7455">
+  <producedTypes>
+    <refType typeId="11c18860-84a1-436b-9161-e56b72403c47" valueTypeId="14637cfa-630c-444c-9cea-ebcc42926e9a"/>
+    <listType typeId="9e3edf35-21eb-4967-8c17-c19b0a375356" valueTypeId="be40372b-4d91-4b51-824f-72564fafdfad"/>
+    <managerType typeId="71af8687-8f7a-43ed-922f-328b2c9d1129" valueTypeId="48144fb0-3926-4a45-b4b0-5b2c2d5c7987"/>
+  </producedTypes>
+  <name>Периодичность</name>
+  <synonym>
+    <key>ru</key>
+    <value>Периодичность</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="b176a53c-e039-4e99-a25b-2a2cf14d124b">
+    <name>ДЕНЬ</name>
+    <synonym>
+      <key>ru</key>
+      <value>ДЕНЬ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="580b6b29-ca69-40c2-af4e-4d0697d00ba9">
+    <name>МЕСЯЦ</name>
+    <synonym>
+      <key>ru</key>
+      <value>МЕСЯЦ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="45ecc657-07a7-4638-b76c-44e2270cf839">
+    <name>ГОД</name>
+    <synonym>
+      <key>ru</key>
+      <value>ГОД</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="4568ad19-54b5-4c0d-b180-a5c6099f3943">
+    <name>КВАРТАЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>КВАРТАЛ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="df0979ca-5d99-43ea-a4dc-1fb8ecfa30cb">
+    <name>НЕДЕЛЯ</name>
+    <synonym>
+      <key>ru</key>
+      <value>НЕДЕЛЯ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="ca4e7b72-56ea-4bad-a6c8-e70d445e5634">
+    <name>ДЕКАДА</name>
+    <synonym>
+      <key>ru</key>
+      <value>ДЕКАДА</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="668185e2-e906-4698-908f-3827f42854c6">
+    <name>ПОЛУГОДИЕ</name>
+    <synonym>
+      <key>ru</key>
+      <value>ПОЛУГОДИЕ</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

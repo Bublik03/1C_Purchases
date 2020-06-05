@@ -7,10 +7,6 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоОстаток</dataPath>
-			<field>КоличествоОстаток</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Номенклатура</dataPath>
 			<field>Номенклатура</field>
 			<role>
@@ -18,32 +14,71 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПриход</dataPath>
+			<field>КоличествоПриход</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
 			<dataPath>Период</dataPath>
 			<field>Период</field>
-			<role>
-				<dcscom:periodNumber>1</dcscom:periodNumber>
-				<dcscom:periodType>Main</dcscom:periodType>
-			</role>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ОстаткиТоваровОстатки.Номенклатура,
-	ОстаткиТоваровОстатки.КоличествоОстаток,
-	ОстаткиТоваров.Период
+	ПоступлениеТоваровОстаткиИОбороты.Номенклатура КАК Номенклатура,
+	СУММА(ПоступлениеТоваровОстаткиИОбороты.КоличествоПриход) КАК КоличествоПриход,
+	ВЫБОР
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.День)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, ДЕНЬ)
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.месяц)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, МЕСЯЦ)
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.год)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, ГОД)
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.квартал)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, КВАРТАЛ)
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.неделя)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, НЕДЕЛЯ)
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.декада)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, ДЕКАДА)
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.полугодие)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, ПОЛУГОДИЕ)
+	КОНЕЦ КАК Период
 ИЗ
-	РегистрНакопления.ОстаткиТоваров.Остатки КАК ОстаткиТоваровОстатки,
-	РегистрНакопления.ОстаткиТоваров КАК ОстаткиТоваров</query>
+	РегистрНакопления.ПоступлениеТоваров.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Запись, , ) КАК ПоступлениеТоваровОстаткиИОбороты
+
+СГРУППИРОВАТЬ ПО
+	ПоступлениеТоваровОстаткиИОбороты.Номенклатура,
+	ВЫБОР
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.День)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, ДЕНЬ)
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.месяц)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, МЕСЯЦ)
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.год)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, ГОД)
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.квартал)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, КВАРТАЛ)
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.неделя)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, НЕДЕЛЯ)
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.декада)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, ДЕКАДА)
+		КОГДА &amp;Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.полугодие)
+			ТОГДА НАЧАЛОПЕРИОДА(ПоступлениеТоваровОстаткиИОбороты.Период, ПОЛУГОДИЕ)
+	КОНЕЦ</query>
 	</dataSet>
 	<totalField>
-		<dataPath>КоличествоОстаток</dataPath>
-		<expression>Сумма(КоличествоОстаток)</expression>
+		<dataPath>КоличествоПриход</dataPath>
+		<expression>Сумма(КоличествоПриход)</expression>
 	</totalField>
 	<parameter>
-		<name>Период</name>
+		<name>НачалоПериода</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Период</v8:content>
+				<v8:content>Начало периода</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -53,6 +88,57 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Периодичность</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Периодичность</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.Периодичность</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<settingsVariant>
@@ -61,45 +147,213 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоОстаток</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Номенклатура</dcsset:field>
+					<dcsset:field>КоличествоПриход</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Периодичность</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>e65b9680-8e36-4afe-9b23-b64b1ef09ee2</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Период</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardBeginningDate">
-						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
-						<v8:date>2020-05-22T20:49:02</v8:date>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
 					</dcscor:value>
+					<dcsset:userSettingID>8cc66b99-c9e0-4550-94f1-a979c470ad23</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Период</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПараметрыДанных.Периодичность</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Периодичность.МЕСЯЦ</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ='ММММ гггг "г."'</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Период</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПараметрыДанных.Периодичность</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Периодичность.ДЕНЬ</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ = дд.ММ.гггг</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Период</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПараметрыДанных.Периодичность</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Периодичность.НЕДЕЛЯ</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ = '"Неделя с" дд.ММ.гггг '</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Период</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПараметрыДанных.Периодичность</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Периодичность.КВАРТАЛ</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ = 'к "квартал" гггг "г."'</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Период</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПараметрыДанных.Периодичность</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Периодичность.ГОД</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ = 'гггг "г."'</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Период</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПараметрыДанных.Периодичность</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Периодичность.ДЕКАДА</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ = '"Декада с" дд.ММ.гггг '</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Период</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПараметрыДанных.Периодичность</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.Периодичность.ПОЛУГОДИЕ</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ = '"Полугодие с" дд.ММ.гггг'</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
 			<dcsset:item xsi:type="dcsset:StructureItemTable">
 				<dcsset:column>
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:use>false</dcsset:use>
 							<dcsset:field>Период</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Период.ЧастиДат.Год</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Период.ЧастиДат.НазваниеМесяца</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Период.ЧастиДат.День</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 						</dcsset:item>
 					</dcsset:groupItems>
 					<dcsset:order>
@@ -126,9 +380,6 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
 				</dcsset:row>
-				<dcsset:selection>
-					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-				</dcsset:selection>
 			</dcsset:item>
 		</dcsset:settings>
 	</settingsVariant>

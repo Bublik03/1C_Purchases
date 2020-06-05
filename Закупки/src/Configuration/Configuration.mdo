@@ -33,14 +33,28 @@
   <subsystems>Subsystem.НСИ</subsystems>
   <roles>Role.БазоваяРоль</roles>
   <roles>Role.ПолныеПрава</roles>
-  <roles>Role.ПодсистемаЗакупки</roles>
-  <roles>Role.ПодсистемаСклад</roles>
-  <roles>Role.ПодсистемаНСИ</roles>
   <roles>Role.ЧтениеПоставщиков</roles>
   <roles>Role.ДобавлениеИзменениеПоставщика</roles>
+  <roles>Role.ЧтениеНоменклатуры</roles>
+  <roles>Role.ДобавлениеИзменениеНоменклатуры</roles>
   <roles>Role.СозданиеИзменениеЗаказа</roles>
+  <roles>Role.ЧтениеЗаказа</roles>
+  <roles>Role.ЧтениеЗаявок</roles>
+  <roles>Role.ДобавлениеИзменениеЗаявок</roles>
+  <roles>Role.ЧтениеПоступлений</roles>
+  <roles>Role.ДобавлениеИзменениеПоступлений</roles>
+  <roles>Role.ЧтениеОтчета</roles>
+  <roles>Role.ИзменениеСтатусаЗаказа</roles>
+  <roles>Role.ПодсистемаНСИ</roles>
+  <roles>Role.ПодсистемаЗакупки</roles>
+  <roles>Role.ЧтениеКатегорий</roles>
+  <roles>Role.ИзменениеПочты</roles>
+  <roles>Role.ЧтениеПеречислений</roles>
+  <roles>Role.ДобавлениеИзменениеКатегорий</roles>
   <constants>Constant.Email</constants>
   <constants>Constant.Пароль</constants>
+  <constants>Constant.АдресСервераSMTP</constants>
+  <constants>Constant.ПортSMTP</constants>
   <catalogs>Catalog.Поставщики</catalogs>
   <catalogs>Catalog.Номенклатура</catalogs>
   <catalogs>Catalog.КатегорииТоваров</catalogs>
@@ -49,6 +63,7 @@
   <documents>Document.Поступления</documents>
   <enums>Enum.СтатусЗаказа</enums>
   <enums>Enum.СтатусЗаявки</enums>
+  <enums>Enum.Периодичность</enums>
   <reports>Report.Закупки</reports>
-  <accumulationRegisters>AccumulationRegister.ОстаткиТоваров</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.ПоступлениеТоваров</accumulationRegisters>
 </mdclass:Configuration>

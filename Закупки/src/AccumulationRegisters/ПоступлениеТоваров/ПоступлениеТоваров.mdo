@@ -8,12 +8,13 @@
     <recordKeyType typeId="02e79f6a-d0bf-45dc-8770-f6b6aeb2c39c" valueTypeId="80ec3fcb-6291-4d70-8150-66e3af81b076"/>
     <recordType typeId="0de51f61-e5a6-4564-8658-93e40299cec3" valueTypeId="22a6dff3-dba3-4caf-b80e-84a983a52d8a"/>
   </producedTypes>
-  <name>ОстаткиТоваров</name>
+  <name>ПоступлениеТоваров</name>
   <synonym>
     <key>ru</key>
-    <value>Остатки товаров</value>
+    <value>Поступление товаров</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
+  <defaultListForm>AccumulationRegister.ПоступлениеТоваров.Form.ФормаСписка</defaultListForm>
   <includeHelpInContents>true</includeHelpInContents>
   <help>
     <pages>
@@ -56,4 +57,13 @@
     <fullTextSearch>Use</fullTextSearch>
     <useInTotals>true</useInTotals>
   </dimensions>
+  <forms uuid="1ba4f546-1456-45a9-ad06-6a067167a7b4">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
 </mdclass:AccumulationRegister>

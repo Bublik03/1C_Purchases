@@ -8,7 +8,6 @@
   <includeHelpInContents>true</includeHelpInContents>
   <includeInCommandInterface>true</includeInCommandInterface>
   <content>Role.ПолныеПрава</content>
-  <content>Role.ПодсистемаЗакупки</content>
   <content>Document.Заказы</content>
   <content>Document.ВнутренниеЗаявки</content>
   <content>Document.Поступления</content>

@@ -30,6 +30,7 @@
   <autonumbering>true</autonumbering>
   <defaultObjectForm>Document.Поступления.Form.ФормаДокумента</defaultObjectForm>
   <defaultListForm>Document.Поступления.Form.ФормаСписка</defaultListForm>
+  <registerRecords>AccumulationRegister.ПоступлениеТоваров</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="681a3ad8-6c5c-4139-858f-c40dbeaffa5e">
@@ -40,7 +41,9 @@
     </synonym>
     <type>
       <types>String</types>
-      <stringQualifiers/>
+      <stringQualifiers>
+        <length>9</length>
+      </stringQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
@@ -67,6 +70,36 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="854b0aee-f822-4876-9d31-d5a275b80d18">
+    <name>Поставщик</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поставщик</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Поставщики</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="33e608c5-152c-4bab-97bc-7bc92fc21d9f">
+    <name>КатегорияТоваров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Категория товаров</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КатегорииТоваров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>

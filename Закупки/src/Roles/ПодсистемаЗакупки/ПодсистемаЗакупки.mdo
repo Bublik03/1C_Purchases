@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="668dc924-e2a9-4332-b96f-70868c2e72b1">
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9261b4c4-e696-4066-917d-d5a453113840">
   <name>ПодсистемаЗакупки</name>
   <synonym>
     <key>ru</key>

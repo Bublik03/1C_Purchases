@@ -25,7 +25,6 @@
   <autonumbering>true</autonumbering>
   <defaultObjectForm>Document.Заказы.Form.ФормаДокумента</defaultObjectForm>
   <defaultListForm>Document.Заказы.Form.ФормаСписка</defaultListForm>
-  <registerRecords>AccumulationRegister.ОстаткиТоваров</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="76e4e293-900b-4c01-95a7-3477b331f84d">
@@ -197,14 +196,16 @@
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
     <attributes uuid="c15e7de5-e2a5-4263-9863-b46e7fd741e6">
-      <name>НомерДокумента</name>
+      <name>НомерЗаявки</name>
       <synonym>
         <key>ru</key>
-        <value>Номер документа</value>
+        <value>Номер заявки</value>
       </synonym>
       <type>
-        <types>String</types>
-        <stringQualifiers/>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
